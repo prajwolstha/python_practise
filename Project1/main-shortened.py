@@ -13,35 +13,14 @@ reverseDict ={1:"Snake" ,-1:"Water",0:"Gun"}
 if youstr not in youDict:
     print("Invalid input! Please enter 's' for Snake, 'w' for Water, or 'g' for Gun.")
     exit()
-
 you = youDict[youstr]
-
 print(f"You pick : {reverseDict[you]} \n Computer chose :{reverseDict[computer]}")
-
 if(computer==you):
     print("Draw")
-
 else:
-        if(computer==-1 and you ==1):
+        if(computer-you==-2 or computer-you==1):
          print("you win")
-
-        elif(computer == -1 and you ==0):
-         print("you lose")
-
-        elif(computer == 1 and you ==-1):
-         print("you win")
-        elif(computer == 1 and you ==0):
-          print("you lose")
-
-        elif(computer == 0 and you ==-1):
-         print("you lose")
-        elif(computer == 0 and you ==1):
-             print("you win")
-
         else:
-            print("something went wrong")
-    
+         print("you lose")
+         
 
-
-
-    
